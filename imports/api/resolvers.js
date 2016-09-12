@@ -6,7 +6,7 @@ export default resolvers = {
 
     Query: {
         posts(_, args){
-            return Post.findAll({});
+            return Post.findAll({where: args});
         },
     }
 };
