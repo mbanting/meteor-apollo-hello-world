@@ -6,7 +6,7 @@ type Post {
 }
 
 type Query {
-  posts: [Post]
+  posts(views: Int): [Post]
 }
 
 schema {
