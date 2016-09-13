@@ -7,7 +7,7 @@ import Post from './post'
  * This React component is responsible for querying Apollo for the posts
  * and passing the results to the child Post components for rendering
  */
-class PostsContainer extends Component {
+class Posts extends Component {
     constructor(props) {
         super(props);
     }
@@ -27,8 +27,8 @@ class PostsContainer extends Component {
     }
 }
 
-// PostsContainer requires props with a data attribute of an array of posts
-PostsContainer.propTypes = {
+// Posts requires props with a data attribute of an array of posts
+Posts.propTypes = {
     data: PropTypes.shape({
         posts: PropTypes.array
     }).isRequired
@@ -46,6 +46,6 @@ const allPosts = gql`
 `;
 
 // Use the graphql container to run the allPosts query and pass the results to PostsContainer
-export default Posts = graphql(allPosts, {
+export default PostsContainer = graphql(allPosts, {
     options: {pollInterval: 5000}
-})(PostsContainer);
+})(Posts);

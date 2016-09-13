@@ -2,7 +2,7 @@
  * The top level react component
  */
 import React, { Component } from 'react';
-import Posts from './posts'
+import PostsContainer from './postsContainer'
 
 export default class App extends Component {
     constructor(props) {
@@ -10,7 +10,7 @@ export default class App extends Component {
     }
     render() {
         return (
-            <Posts />
+            <PostsContainer />
         )
     }
 }
