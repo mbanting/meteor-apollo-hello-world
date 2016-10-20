@@ -16,7 +16,7 @@ class Posts extends Component {
         if (this.props.data.posts && this.props.data.posts instanceof Array) {
             posts = (
                 <div>
-                    {this.props.data.posts.map(function(post) {
+                    {this.props.data.posts.reverse().map(function(post) {
                         return <Post key={post.id} post={post} />;
                     })}
                 </div>
