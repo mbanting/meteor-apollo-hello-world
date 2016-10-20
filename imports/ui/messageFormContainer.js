@@ -7,8 +7,7 @@ const addPost = gql`
     mutation addPostMutation ($content: String!) {
       addPost(content: $content) {
         id,
-        content,
-        views
+        content
       }
     }
 `;
