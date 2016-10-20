@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
-import Post from './post'
+import Post from './post';
 
 /**
  * This React component is responsible for querying Apollo for the posts
