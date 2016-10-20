@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import PostsContainer from './postsContainer'
+import MessageFormContainer from './messageFormContainer'
 
 export default class App extends Component {
     constructor(props) {
@@ -10,7 +11,11 @@ export default class App extends Component {
     }
     render() {
         return (
-            <PostsContainer />
+            <div className="row">
+                <div className="col s8"><PostsContainer /></div>
+                <div className="col s4"><MessageFormContainer /></div>
+            </div>
+
         )
     }
 }
