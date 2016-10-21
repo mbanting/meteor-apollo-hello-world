@@ -17,14 +17,14 @@ const addPost = gql`
 
 export default MessageFormContainer = graphql(addPost, {
     props: ({ mutate }) => ({
-        submit: (content) => mutate({
-            variables: { content },
+        submit: (message) => mutate({
+            variables: { content: message },
             optimisticResponse: {
                 __typename: 'Mutation',
                 addPost: {
                     __typename: 'Post',
                     id: Math.floor((Random.fraction() * 100000) + 1),
-                    content: content,
+                    content: message,
                     views: null
                 },
             },
@@ -38,6 +38,6 @@ export default MessageFormContainer = graphql(addPost, {
                     });
                 },
             },
-        }),
+        })
     }),
 })(MessageForm);
